@@ -1,0 +1,112 @@
+{
+  "name": "attestium",
+  "description": "Element of attestation - Runtime code verification and integrity monitoring library for Node.js applications",
+  "version": "1.0.0",
+  "author": "Forward Email Community",
+  "bugs": {
+    "url": "https://github.com/attestium/attestium/issues"
+  },
+  "dependencies": {
+    "cosmiconfig": "^9.0.0",
+    "trusted-platform-module-2": "^1.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "c8": "^10.1.3",
+    "fixpack": "^4.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.0.0",
+    "remark-cli": "^12.0.1",
+    "remark-preset-github": "^4.0.4",
+    "rimraf": "^6.0.1",
+    "xo": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "lib/",
+    "examples/",
+    "assets/",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://attestium.com",
+  "keywords": [
+    "attestation",
+    "attestium",
+    "audit",
+    "checksum",
+    "code",
+    "crypto",
+    "element",
+    "forward-email",
+    "hash",
+    "integrity",
+    "javascript",
+    "monitoring",
+    "node",
+    "runtime",
+    "security",
+    "system-transparency",
+    "tamper-proof",
+    "transparency",
+    "verification"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "packageManager": "pnpm@9.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/attestium/attestium.git"
+  },
+  "scripts": {
+    "build": "pnpm run build:clean && node build.mjs",
+    "build:clean": "rimraf lib",
+    "c8": "c8 --reporter=text --reporter=html node --test test/*.js",
+    "lint": "fixpack && remark . -qfo && xo --fix",
+    "pre-commit": "lint-staged",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm run build",
+    "pretest": "pnpm run lint",
+    "test": "node --test test/*.js",
+    "test-coverage": "c8 --reporter=text --reporter=html --reporter=json-summary node --test test/*.js"
+  },
+  "types": "lib/index.d.ts",
+  "xo": {
+    "rules": {
+      "unicorn/prefer-module": "off",
+      "import-x/extensions": "off",
+      "no-unused-vars": "off",
+      "no-promise-executor-return": "off",
+      "n/prefer-global/process": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/prefer-top-level-await": "off",
+      "unicorn/import-style": "off",
+      "no-return-await": "off",
+      "no-await-in-loop": "off",
+      "@stylistic/function-paren-newline": "off",
+      "n/prefer-global/buffer": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "no-return-assign": "off",
+      "promise/prefer-await-to-then": "off",
+      "unicorn/no-process-exit": "off",
+      "no-dupe-keys": "off",
+      "no-new": "off",
+      "max-depth": "off",
+      "unicorn/no-this-assignment": "off",
+      "prefer-rest-params": "off",
+      "logical-assignment-operators": "off",
+      "no-dupe-class-members": "off"
+    }
+  }
+}
