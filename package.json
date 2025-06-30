@@ -79,7 +79,8 @@
     "prepublishOnly": "pnpm run build",
     "pretest": "pnpm run lint",
     "test": "node --test test/*.js",
-    "test-coverage": "c8 --reporter=text --reporter=html --reporter=json-summary node --test test/*.js"
+    "test-coverage": "c8 --reporter=text --reporter=html --reporter=json-summary node --test test/*.js",
+    "coverage": "c8 --reporter=text --reporter=html --reporter=json-summary node --test test/*.js"
   },
   "types": "lib/index.d.ts",
   "xo": {

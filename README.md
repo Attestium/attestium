@@ -3,9 +3,11 @@
 ![Attestium Logo](./assets/logo.png)
 
 [![Node.js CI](https://github.com/attestium/attestium/workflows/CI/badge.svg)](https://github.com/attestium/attestium/actions)
-[![Coverage Status](https://img.shields.io/badge/coverage-84%25-green.svg)](https://github.com/attestium/attestium/actions)
 [![npm version](https://badge.fury.io/js/attestium.svg)](https://badge.fury.io/js/attestium)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/node/v/attestium.svg)](https://nodejs.org/)
+[![Security Audit](https://img.shields.io/badge/security-audited-green.svg)](https://github.com/attestium/attestium/actions)
+[![TPM 2.0](https://img.shields.io/badge/TPM-2.0-blue.svg)](https://trustedcomputinggroup.org/)
 
 > **Element of Attestation** - Runtime code verification and integrity monitoring for Node.js applications
 
